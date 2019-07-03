@@ -1,5 +1,4 @@
-public class Cromossomo{
-    // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
+﻿public class Cromossomo{
     private Gene[] gene;
     
     public Cromossomo(int quantity){

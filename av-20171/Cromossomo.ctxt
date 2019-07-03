@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Cromossomo
+comment1.params=quantity
+comment1.target=Cromossomo(int)
+comment2.params=valores
+comment2.target=Cromossomo(java.lang.String)
+comment3.params=allele
+comment3.target=Gene\ getGene(int)
+comment4.params=allele\ gene
+comment4.target=void\ setGene(int,\ Gene)
+comment5.params=allele\ valor
+comment5.target=void\ setGene(int,\ int)
+comment6.params=
+comment6.target=int\ getQuantity()
+comment7.params=
+comment7.target=Cromossomo\ clone()
+comment8.params=Cromo
+comment8.target=double\ getPercentIdentity(Cromossomo)
+numComments=9
