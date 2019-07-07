@@ -60,16 +60,30 @@ public class Cromossomo{
     }
     
     public void crossover(int pto, Cromossomo idn){
-       Gene[] me = new Gene[idn.getQuantity()]
-       Gene[] other = new Gene[this.getQuantity()]
+       Gene[] me = new Gene[idn.getQuantity()];
+       Gene[] other = new Gene[this.getQuantity()];
        
-       for(int i=0; i <= pto; i++){
+       for(int i=0; i < pto; i++){
            me[i] = this.getGene(i);
            other[i] = idn.getGene(i);
        }
        
-       /*for(int i=0; i<me.length; i++){
-        
-       }*/
+       for(int i = pto; i < me.length; i++){
+           me[i] = idn.getGene(i);
+       }
+       
+       for(int i = pto; i < other.length; i++){
+           other[i] = this.getGene(i);
+       }
+       
+       this.gene = me;
+       idn.gene = other;
+    }
+    
+    public String toString(){
+        String str = "";
+        for(Gene g : this.gene)
+            str += g.getValor();
+        return str;
     }
 }

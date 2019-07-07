@@ -36,6 +36,15 @@ public class Teste{
     }    
     
     public void rodar4(){
+        Cromossomo c1 = new Cromossomo("00*056455987");
+        Cromossomo c2 = new Cromossomo("08*056987002");
         
+        System.out.println(c1.getPercentIdentity(c2));
+        System.out.println(c2.getPercentIdentity(c1));
+        
+        c1.crossover(3, c2);
+        
+        System.out.println(c1);
+        System.out.println(c2);
     }
 }

@@ -6,4 +6,6 @@ comment2.params=
 comment2.target=void\ rodar2()
 comment3.params=
 comment3.target=void\ rodar()
-numComments=4
+comment4.params=
+comment4.target=void\ rodar4()
+numComments=5
