@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Verbete
+comment1.params=palavra\ gramClass\ descricao
+comment1.target=Verbete(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=palavra\ gramClass\ descricao\ tamanho
+comment2.target=Verbete(java.lang.String,\ java.lang.String,\ java.lang.String,\ int)
+comment3.params=
+comment3.target=java.lang.String\ getPalavra()
+comment4.params=
+comment4.target=java.lang.String\ getclasseGramatical()
+comment5.params=
+comment5.target=java.lang.String\ getDescricao()
+comment6.params=s1
+comment6.target=int\ comparaString(java.lang.String)
+comment7.params=v1
+comment7.target=int\ equalsVerbetes(Verbete)
+comment8.params=sinonimo
+comment8.target=void\ adicionaSinonimo(java.lang.String)
+numComments=9
