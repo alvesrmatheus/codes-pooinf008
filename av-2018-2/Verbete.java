@@ -36,7 +36,7 @@ public class Verbete{
     
     public int comparaString(String s1){
         int comparaString;
-        if(s1 == getPalavra())
+        if(s1.equals(getPalavra()))
             comparaString = 1;
         else
             comparaString = 0;
