@@ -46,8 +46,8 @@ public class Verbete{
     
     public int equalsVerbetes(Verbete v1){
         int verificaVerbetes;
-        if((this.getPalavra() == v1.getPalavra()) 
-        && (this.getclasseGramatical() == v1.getclasseGramatical()))
+        if(getPalavra().equals(v1.getPalavra()) 
+        && (v1.getclasseGramatical().equals(this.getclasseGramatical())))
             verificaVerbetes = 1;
          else 
             verificaVerbetes = 0;
