@@ -1,32 +1,25 @@
 public class Verbete{
     // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
-    private String palavra;
-    //private int tamanhoListaSinonimos;
-    private String classeGramatical;
-    private String descricao;
-    private String[] listaSinonimos;
-
-    public Verbete(String palavra, String gramClass, String descricao){
-       this.palavra = palavra;
-       this.classeGramatical = gramClass;
-       this.descricao = descricao;
-    }
+    public static final int SUBSTANTIVO = 0;
     
-    public Verbete(String palavra, String gramClass, String descricao, int tamanho){
+    private String palavra;
+    private String descricao;
+    private ClasseGramatical classeGramatical;
+    private Verbete[] listaSinonimos;
+
+    public Verbete(String palavra, String descricao, ClasseGramatical gramClass){
        this.palavra = palavra;
-       this.classeGramatical = gramClass;
        this.descricao = descricao;
-       //new String[tamanho];
+       this.classeGramatical = gramClass;
     }
 
     public String getPalavra(){
         // ponha seu código aqui
         return this.palavra;
     }
-       
-    public String getclasseGramatical(){
-        // ponha seu código aqui
-        return this.classeGramatical;
+    
+    private void setPalavra(String palavra){
+        this.palavra = palavra;
     }
        
     public String getDescricao(){
@@ -34,35 +27,46 @@ public class Verbete{
         return this.descricao;
     }
     
-    public int comparaString(String s1){
-        int comparaString;
-        if(s1.equals(getPalavra()))
-            comparaString = 1;
-        else
-            comparaString = 0;
-            
-        return comparaString;
+    private void setDescricao(String descricao){
+        this.descricao = descricao;
     }
     
-    public int equalsVerbetes(Verbete v1){
-        int verificaVerbetes;
-        if(getPalavra().equals(v1.getPalavra()) 
-        && (v1.getclasseGramatical().equals(this.getclasseGramatical())))
-            verificaVerbetes = 1;
-         else 
-            verificaVerbetes = 0;
+    public ClasseGramatical getClasseGramatical(){
+        // ponha seu código aqui
+        return this.classeGramatical;
+    }
+    
+    private void setClasseGramatical(ClasseGramatical gramClass){
+        this.classeGramatical = gramClass;
+    }
+    
+    
+    public void adicionarSinonimo(Verbete verbete){
+        Verbete[] aux = new Verbete[this.listaSinonimos.length+1];
         
-        return verificaVerbetes;
-    }
-    
-    public void adicionaSinonimo(String sinonimo){
-        for(int i=0; i<listaSinonimos.length; i++){
-            if(sinonimo.equals(listaSinonimos))
-                return;
-            else{
-                listaSinonimos[i+1] = sinonimo;
-            }
+        for(int i=0; i<this.listaSinonimos.length; i++){
+            aux[i] = this.listaSinonimos[i];
         }
+        aux[aux.length-1] = verbete;
+        this.listaSinonimos = aux;
     }
     
+    public boolean comparaStringVerbete(String palavra){
+        return this.getPalavra().equalsIgnoreCase(palavra);
+    }
+    
+    public boolean equalsVerbetes(Verbete verbete){
+       return this.getPalavra().equals(verbete.getPalavra()) 
+       && this.getclasseGramatical().equals(verbete.getClasseGramatical()); 
+    }
+    
+    public boolean equivalente(Verbete verbete){
+        if(this.equals(verbete)) return true;
+        
+        for(Verbete v : this.listaSinonimos)
+            if(v.equals(verbete))
+                return true;
+                
+        return false;
+    }
 }
