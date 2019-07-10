@@ -41,7 +41,7 @@ public class Verbete{
     }
     
     
-    public void adicionarSinonimo(Verbete verbete){
+    private void addSinonimo(Verbete verbete){
         Verbete[] aux = new Verbete[this.listaSinonimos.length+1];
         
         for(int i=0; i<this.listaSinonimos.length; i++){
@@ -51,22 +51,53 @@ public class Verbete{
         this.listaSinonimos = aux;
     }
     
+    public void adicionarSinonimoOutro(Verbete verbete){
+        if(this.verificaSinonimo(verbete)) return;
+        this.addSinonimo(verbete);
+        verbete.adicionarSinonimoOutro(this);
+    }
+    
     public boolean comparaStringVerbete(String palavra){
         return this.getPalavra().equalsIgnoreCase(palavra);
     }
     
     public boolean equalsVerbetes(Verbete verbete){
-       return this.getPalavra().equals(verbete.getPalavra()) 
-       && this.getclasseGramatical().equals(verbete.getClasseGramatical()); 
+       if(this.getPalavra().equals(verbete.getPalavra()) 
+       && this.getClasseGramatical().equals(verbete.getClasseGramatical()))
+            return true;
+            
+       return false;
     }
     
     public boolean equivalente(Verbete verbete){
-        if(this.equals(verbete)) return true;
+        if(this.equals(verbete)) 
+            return true;
+            
+        return false;
+    }
+    
+    public boolean verificaSinonimo(Verbete verbete){
+        for(Verbete v : this.listaSinonimos){
+            if(v.equals(verbete)){
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public String toString(){
+        String str = this.getPalavra() + "\n" + this.getClasseGramatical() + "\n"
+                     + this.getDescricao() + "\n";
         
         for(Verbete v : this.listaSinonimos)
-            if(v.equals(verbete))
-                return true;
-                
-        return false;
+            str = str + v.getPalavra() + "\n";
+        
+        return str;
+    }
+    
+    public boolean verificaNomeVerbete(){
+        return this.getClasseGramatical().equals(this.classeGramatical.SUBSTANTIVO) 
+        || this.getClasseGramatical().equals(this.classeGramatical.ADJETIVO)
+        || this.getClasseGramatical().equals(this.classeGramatical.PRONOME);
     }
 }

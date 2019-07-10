@@ -4,6 +4,7 @@ public class Teste{
         // inicializa variáveis de instância
         Verbete v = new Verbete("verbete", "conjunto de acepções...", ClasseGramatical.SUBSTANTIVO);
         
+        
     }
 
 }
