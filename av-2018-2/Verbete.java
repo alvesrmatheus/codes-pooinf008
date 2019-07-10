@@ -6,13 +6,13 @@ public class Verbete{
     private String descricao;
     private ClasseGramatical classeGramatical;
     private Verbete[] listaSinonimos;
-
+    
     public Verbete(String palavra, String descricao, ClasseGramatical gramClass){
        this.palavra = palavra;
        this.descricao = descricao;
        this.classeGramatical = gramClass;
     }
-
+    
     public String getPalavra(){
         // ponha seu código aqui
         return this.palavra;
@@ -32,8 +32,8 @@ public class Verbete{
     }
     
     public ClasseGramatical getClasseGramatical(){
-        // ponha seu código aqui
-        return this.classeGramatical;
+    // ponha seu código aqui
+    return this.classeGramatical;
     }
     
     private void setClasseGramatical(ClasseGramatical gramClass){
@@ -41,7 +41,7 @@ public class Verbete{
     }
     
     
-    private void addSinonimo(Verbete verbete){
+    public void addSinonimo(Verbete verbete){
         Verbete[] aux = new Verbete[this.listaSinonimos.length+1];
         
         for(int i=0; i<this.listaSinonimos.length; i++){
@@ -50,6 +50,10 @@ public class Verbete{
         aux[aux.length-1] = verbete;
         this.listaSinonimos = aux;
     }
+    
+     public boolean verificaPalavra(String palavra){
+        return this.getPalavra().equalsIgnoreCase(palavra);
+    } 
     
     public void adicionarSinonimoOutro(Verbete verbete){
         if(this.verificaSinonimo(verbete)) return;
@@ -70,10 +74,7 @@ public class Verbete{
     }
     
     public boolean equivalente(Verbete verbete){
-        if(this.equals(verbete)) 
-            return true;
-            
-        return false;
+        return this.equals(verbete) || this.verificaSinonimo(verbete); 
     }
     
     public boolean verificaSinonimo(Verbete verbete){
@@ -85,19 +86,20 @@ public class Verbete{
         return false;
     }
     
-    public String toString(){
-        String str = this.getPalavra() + "\n" + this.getClasseGramatical() + "\n"
-                     + this.getDescricao() + "\n";
-        
-        for(Verbete v : this.listaSinonimos)
-            str = str + v.getPalavra() + "\n";
-        
-        return str;
-    }
-    
     public boolean verificaNomeVerbete(){
         return this.getClasseGramatical().equals(this.classeGramatical.SUBSTANTIVO) 
         || this.getClasseGramatical().equals(this.classeGramatical.ADJETIVO)
         || this.getClasseGramatical().equals(this.classeGramatical.PRONOME);
     }
+    
+    public String toString(){
+        String str = this.getPalavra() + "\n" +
+                     this.getClasseGramatical() + ".\n" + 
+                     this.getDescricao() + ".\nsinônimos:";
+                     
+        for(Verbete v : this.listaSinonimos) 
+          str = str + v.getPalavra() + " - ";
+        return str + "\n";  
+    }
+    
 }

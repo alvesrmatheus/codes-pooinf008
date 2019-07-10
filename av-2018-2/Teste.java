@@ -1,10 +1,32 @@
 public class Teste{
-    // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
+    
+    private Dicionario teste;
+    
     public void run(){
-        // inicializa variáveis de instância
-        Verbete v = new Verbete("verbete", "conjunto de acepções...", ClasseGramatical.SUBSTANTIVO);
+        Verbete v = new Verbete("verbete", 
+        "conjunto das acepções...", ClasseGramatical.SUBSTANTIVO);
+        Verbete v2 = new Verbete("verbete2", 
+        "conjunto das acepções2...", ClasseGramatical.ADVERBIO);
         
+        System.out.println(v);
+        System.out.println("***");
+        System.out.println(v2); 
+        System.out.println("***");        
+        System.out.println("***");        
         
-    }
-
+        v.adicionarSinonimoOutro(v2);
+        
+        System.out.println(v);
+        System.out.println("***");
+        System.out.println(v2); 
+        System.out.println("***");        
+        System.out.println("***");        
+        
+        v2.adicionarSinonimoOutro(v);        
+        System.out.println(v);
+        System.out.println("***");
+        System.out.println(v2); 
+        System.out.println("***");        
+        System.out.println("***");        
+    }    
 }
