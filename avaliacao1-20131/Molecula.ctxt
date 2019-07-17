@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Molecula
+comment1.params=
+comment1.target=Molecula()
+comment2.params=atomos
+comment2.target=void\ setAtomos(ElementoQuimico)
+comment3.params=
+comment3.target=ElementoQuimico\ getAtomos()
+comment4.params=
+comment4.target=int\ getTamanho()
+numComments=5
