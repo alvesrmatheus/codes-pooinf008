@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=ContaCorrente
+comment1.params=
+comment1.target=double\ getSaldo()
+comment2.params=
+comment2.target=java.lang.String\ getId()
+comment3.params=saldo
+comment3.target=void\ setSaldo(double)
+comment4.params=id
+comment4.target=void\ setId(java.lang.String)
+comment5.params=saldoAtual
+comment5.target=void\ depositar(double)
+comment6.params=saque
+comment6.target=void\ sacar(double)
+comment7.params=cc
+comment7.target=boolean\ equals(ContaCorrente)
+numComments=8
