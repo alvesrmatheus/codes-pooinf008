@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Contas
+comment1.params=
+comment1.target=Contas()
+comment2.params=nome\ saldo\ funcao
+comment2.target=Contas(java.lang.String,\ double,\ TipoDeConta)
+comment3.params=
+comment3.target=java.lang.String\ getNomeConta()
+comment4.params=nome
+comment4.target=void\ setNomeConta(java.lang.String)
+comment5.params=
+comment5.target=TipoDeConta\ getFuncao()
+comment6.params=
+comment6.target=double\ getSaldo()
+comment7.params=montante
+comment7.target=void\ debito(double)
+comment8.params=montante
+comment8.target=void\ credito(double)
+numComments=9

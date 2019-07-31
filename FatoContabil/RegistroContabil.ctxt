@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=RegistroContabil
+comment1.params=nome\ cnpj
+comment1.target=RegistroContabil(java.lang.String,\ java.lang.String)
+numComments=2
