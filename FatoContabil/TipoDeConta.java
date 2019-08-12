@@ -1,5 +1,5 @@
 public enum TipoDeConta{
-   CONTA_DE_ATIVO,
-   CONTA_DE_PASSIVO,
+   ATIVO,
+   PASSIVO,
    PATRIMONIO_LIQUIDO;
 }

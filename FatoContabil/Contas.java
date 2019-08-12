@@ -24,24 +24,11 @@ public class Contas{
         return this.funcao;
     }
     
+    public void setFuncao(TipoDeConta valor){
+        this.funcao = valor;
+    }
+    
     public double getSaldo(){
         return this.saldo;
-    }
-    
-    public void debito(double montante){
-        if(this.funcao.equals(getFuncao().CONTA_DE_ATIVO)){
-            saldo += montante;
-        }
-        
-        return;
-    }
-    
-    public void credito(double montante){
-        if(this.funcao.equals(getFuncao().CONTA_DE_PASSIVO) 
-            || this.funcao.equals(getFuncao().PATRIMONIO_LIQUIDO)){
-            saldo -= montante;
-        }
-        
-        return;
     }
 }
