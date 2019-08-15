@@ -2,6 +2,7 @@ package pooinf008;
 
 public class AreaSensoreada {
 	
-	private UnidadeSensora [] u1;
+	private UnidadeSensora [] unidades;
+	private EstacaoColeta estacaoBase;
 	
 }
