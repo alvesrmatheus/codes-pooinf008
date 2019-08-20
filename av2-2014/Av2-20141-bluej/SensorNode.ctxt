@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=SensorNode
+comment1.params=
+comment1.target=double\ getValor()
+comment2.params=valor
+comment2.target=void\ setValor(double)
+numComments=3

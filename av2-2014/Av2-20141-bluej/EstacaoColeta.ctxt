@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=EstacaoColeta
+comment1.params=
+comment1.target=double[]\ getHistoricoValores()
+comment2.params=historicoValores
+comment2.target=void\ setHistoricoValores(double[])
+comment3.params=
+comment3.target=double\ retornaMedia()
+numComments=4
