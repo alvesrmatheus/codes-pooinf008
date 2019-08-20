@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=ValorSensoriado
+comment1.params=tempMedia\ qtdeEstacoes
+comment1.target=ValorSensoriado(double,\ int)
+comment2.params=tempMedia
+comment2.target=void\ setTempMedia(double)
+comment3.params=qtdeEstacoes
+comment3.target=void\ setQtdeEstacoes(int)
+comment4.params=
+comment4.target=int\ getQtdeEstacoes()
+comment5.params=
+comment5.target=double\ getTempMedia()
+comment6.params=
+comment6.target=double\ getTempTotal()
+comment7.params=
+comment7.target=java.lang.String\ toString()
+numComments=8
