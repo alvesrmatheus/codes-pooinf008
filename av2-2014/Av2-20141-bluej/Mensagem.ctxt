@@ -1,5 +1,9 @@
 #BlueJ class context
 comment0.target=Mensagem
-comment1.params=
-comment1.target=double\ media()
-numComments=2
+comment1.params=id
+comment1.target=Mensagem(java.lang.String)
+comment2.params=
+comment2.target=Mensagem()
+comment3.params=
+comment3.target=double\ media()
+numComments=4

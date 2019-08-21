@@ -10,11 +10,11 @@ public class EstacaoColeta extends UnidadeSensora{
         double sumMedida = 0; 
         double valorMedio = 0;
         
-        for(UnidadeSensora unidadeSensora : filhos){
-            Mensagem m = unidadeSensora.processar();
-            System.out.println(m);
-            totalFilhos += m.qtdEstacoes();
-            sumMedida += m.tempTotal();
+        for(UnidadeSensora us : this.filhos){
+            Mensagem m = us.processar();
+            //System.out.println(m);
+            totalFilhos += m.getQtdeEstacoes();
+            sumMedida += m.getTempTotal();
         }    
         
         valorMedio = sumMedida / totalFilhos;
