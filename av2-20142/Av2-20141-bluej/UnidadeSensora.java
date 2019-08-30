@@ -9,6 +9,7 @@ public abstract class UnidadeSensora {
 
     public UnidadeSensora(String id){
         this.id = id;
+        this.filhos = new UnidadeSensora[0];
     }    
     
     public void addFilho(UnidadeSensora novoFilho){
@@ -20,7 +21,11 @@ public abstract class UnidadeSensora {
        novo[novo.length - 1] = novoFilho;
        this.filhos = novo;
        novoFilho.pai = this;
-    }    
+    }
+    
+    public void setPai(UnidadeSensora us){
+        this.pai = us;
+    } 
     
     
     public Mensagem processar(){
