@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=FimProjeto
+comment1.params=
+comment1.target=FimProjeto()
+comment2.params=
+comment2.target=boolean\ isAtividadeInicio()
+comment3.params=
+comment3.target=boolean\ isAtividadeFim()
+comment4.params=
+comment4.target=int\ getDuracao()
+numComments=5

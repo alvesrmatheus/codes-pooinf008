@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=AtividadeElementar
+comment1.params=
+comment1.target=AtividadeElementar()
+comment2.params=id\ duracao\ status\ descricao\ preRequisitos
+comment2.target=AtividadeElementar(java.lang.String,\ int,\ boolean,\ java.lang.String,\ Atividade[])
+comment3.params=
+comment3.target=boolean\ isAtividadeInicio()
+comment4.params=
+comment4.target=boolean\ isAtividadeFim()
+numComments=5
