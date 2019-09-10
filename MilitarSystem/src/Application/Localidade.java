@@ -1,9 +1,16 @@
 package Application;
 
 public class Localidade {
+
 	private String nome;
 	private RegiaoInfluencia[] regiaoInfluencia;
 	//private double valor;
+	
+	public Localidade(String nome) {
+		this.regiaoInfluencia = regiaoInfluencia;
+		this.nome = nome;
+	}
+	
 	
 	//GETTERS AND SETTERS
 	public String getNome() {
@@ -20,11 +27,11 @@ public class Localidade {
 	
 	//--------------------------------------------
 
-	public void addRegionInfluencias(RegiaoInfluencia regiao){
+	public void addRegiaoInfluencia(RegiaoInfluencia regiao){
 		RegiaoInfluencia[] novo = new RegiaoInfluencia[this.regiaoInfluencia.length + 1];
-		for(int i=0; i<this.regiaoInfluencia.length; i++){
+		for(int i=0; i<this.regiaoInfluencia.length; i++)
 			novo[i] = this.regiaoInfluencia[i];	
-		}
+		
 		novo[novo.length - 1] = regiao;
 		this.regiaoInfluencia = novo;
 	}

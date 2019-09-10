@@ -3,9 +3,10 @@ package Application;
 public class UnidadeCombateAereo extends UnidadeCombate {
 	private int qtdAvioesCacas;
 
-	public UnidadeCombateAereo(String id, int qtdMilitares, Localidade l) {
+	public UnidadeCombateAereo(String id, int qtdMilitares, int qtdCacas, Localidade l) {
 		// TODO Auto-generated constructor stub
 		super(id, qtdMilitares, l);
+		this.qtdAvioesCacas = qtdCacas;
 	}
 
 	@Override

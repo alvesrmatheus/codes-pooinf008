@@ -4,6 +4,10 @@ public class RegiaoInfluencia {
 	private double valor;
 	private Localidade localidade;
 
+	public RegiaoInfluencia(Localidade localidade, double valor){
+        this.setLocalidade(localidade);
+        this.setValor(valor);
+    }  
 	
 	//GETTERS AND SETTERS
 	public double getValor() {
@@ -15,6 +19,10 @@ public class RegiaoInfluencia {
 		return localidade;
 	}
 	
+	public void setLocalidade(Localidade localidade) {
+		this.localidade = localidade;
+	}
+
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
