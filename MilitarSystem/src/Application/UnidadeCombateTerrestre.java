@@ -13,11 +13,8 @@ public class UnidadeCombateTerrestre extends UnidadeCombate {
 	@Override
 	public double potenciaAbsoluta() {
 		// TODO Auto-generated method stub
-		return qtdMilitares+(3*qtdBlindados)+(5*qtdTanques);
+		return qtdMilitares+(3 * qtdBlindados)+(5 * qtdTanques);
 		
 	}
-	
-	
-	
 	
 }
