@@ -1,3 +1,4 @@
+package prova.model;
 public class Gene{
    private int valor;
    
@@ -13,12 +14,12 @@ public class Gene{
        return this.valor;
    }
    
-   private void setValor(int valor){
+   public void setValor(int valor){
        this.valor = valor;
    }
    
-   public Gene clonar(Gene gene){
-       gene = new Gene(this.getValor());
+   public Gene clonar(){
+       Gene gene = new Gene(this.getValor());
        return gene;
    }
    
