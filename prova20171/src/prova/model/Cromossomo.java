@@ -46,4 +46,23 @@ public class Cromossomo{
         
         return cromo;
     }
+    
+    public double percentSim(Cromossomo cromo){
+    	int similaridade=0;
+    	for(int i=0; i<this.genes.length && i < cromo.genes.length; i++){
+    		if((this.getGene(i)== null && cromo.getGene(i) != null) 
+    			|| (this.getGene(i) != null && cromo.getGene(i) == null))
+    			similaridade-=2;
+    		else if((this.getGene(i) != null && cromo.getGene(i) == null)
+    			|| (this.getGene(i) != null && cromo.getGene(i) == null))
+    			similaridade+=2;
+    		
+    		if(this.getGene(i).equals(cromo.getGene(i)))
+    			similaridade+=1;
+    		else 
+    			similaridade-=1;
+    	}
+    		
+    	return similaridade / this.genes.length;
+    }
 }
