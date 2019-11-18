@@ -63,6 +63,25 @@ public class Cromossomo{
     			similaridade-=1;
     	}
     		
-    	return similaridade / this.genes.length;
+    	return (double)similaridade / this.genes.length;
+    }
+    
+    public void cruzamento(Cromossomo cromo, int pontoUnico) {
+    	Gene[] aux1 = new Gene[cromo.genes.length];
+    	Gene[] aux2 = new Gene[this.genes.length];
+    	
+    	for(int i=0; i < pontoUnico; i++) {
+    		aux1[i] = this.getGene(i);
+    		aux2[i] = cromo.getGene(i);     		
+    	}
+    	
+    	for(int i = pontoUnico; i < aux1.length; i++)
+    		aux1[i] = cromo.getGene(i);
+    	
+    	for(int j = pontoUnico; j < aux2.length; j++)
+    		aux2[j] = this.getGene(j);
+    	
+    	cromo.genes = aux1;
+    	this.genes = aux2;
     }
 }
