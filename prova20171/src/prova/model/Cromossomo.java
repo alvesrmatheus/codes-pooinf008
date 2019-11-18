@@ -66,6 +66,7 @@ public class Cromossomo{
     	return (double)similaridade / this.genes.length;
     }
     
+    
     public void cruzamento(Cromossomo cromo, int pontoUnico) {
     	Gene[] aux1 = new Gene[cromo.genes.length];
     	Gene[] aux2 = new Gene[this.genes.length];

@@ -27,4 +27,8 @@ public class Gene{
        return this.getValor() == gene.getValor();
    }
    
+   public int getAfinidade(int valorProteina){
+       return Math.abs(this.getValor() - valorProteina);
+   }   
+   
 }
