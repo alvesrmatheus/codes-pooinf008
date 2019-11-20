@@ -34,4 +34,11 @@ public class Playlist {
 		aux[aux.length+1] = musica;
 		this.musicas = aux;
 	}
+	
+	public boolean equals(Musica musica) {
+		for(Musica m : this.musicas)
+			if(m.equals(musica))
+				return true;
+		return false;
+	}
 }
