@@ -35,7 +35,7 @@ public class Playlist {
 		this.musicas = aux;
 	}
 	
-	public boolean equals(Musica musica) {
+	public boolean verificaExistencia(Musica musica) {
 		for(Musica m : this.musicas)
 			if(m.equals(musica))
 				return true;

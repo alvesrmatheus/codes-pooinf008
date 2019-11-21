@@ -102,6 +102,14 @@ public class Musica {
         return(double)proxim;
     }
     
+    public double proximidadeMusical(Playlist p) {
+    	double proxim=0;;
+    	for(Musica m : p.getMusicas())
+    		if(this.proximidadeMusical(m) > proxim)
+    			proxim = this.proximidadeMusical(m);
+    	return proxim;
+    }
+    
     
     private double pctArtistas(Musica musica) {
     	int percentual=0;
