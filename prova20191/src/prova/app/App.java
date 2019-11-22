@@ -6,15 +6,14 @@ public class App {
 	
 	private CriarDatabaseIF cd1;
 	
-	public App() {
+	public void run() {
 		this.cd1 = new Database();
 	}
 	
 	
 	
 	public static void main(String[] args) {
-
-		
+		(new App()).run();
 	}
 
 }
