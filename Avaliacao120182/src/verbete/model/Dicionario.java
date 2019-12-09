@@ -8,6 +8,15 @@ public class Dicionario {
         this.verbetes = new Verbete[0];
     } 
 	
+	public Dicionario adicionarVerbete(Verbete verbete){
+        Verbete[] aux = new Verbete[this.verbetes.length + 1];
+        for(int iCont = 0; iCont < this.verbetes.length; iCont++)
+          aux[iCont] = this.verbetes[iCont];
+        aux[aux.length -1] = verbete;  
+        this.verbetes = aux;
+        return this;
+    } 
+	
 	public Verbete getVerbete(String entrada) {
 		for(Verbete v : this.verbetes)
 			if(v.getEntrada(entrada))
