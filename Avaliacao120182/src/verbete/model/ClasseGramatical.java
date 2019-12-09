@@ -1,4 +1,4 @@
-package br.com.verbete.model;
+package verbete.model;
 
 public enum ClasseGramatical {
 		SUBSTANTIVO, VERBO, ADJETIVO,
