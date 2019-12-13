@@ -1,12 +1,13 @@
-package br.com.adsifba.inf008;
-
-public class ElementoQuimico {
+package br.com.adsifba.inf008.model;
+//Parte 1
+public class Atomo {
+	//i
 	private String nome;
 	private int numeroAtomico;
 	private int massaAtomica;
 	private int[] qtdEletrons;
-	
-	public ElementoQuimico(String nome, int numAtomico, int massa) {
+	//ii
+	public Atomo(String nome, int numAtomico, int massa) {
 		this.nome = nome;
 		this.numeroAtomico = numAtomico;
 		this.massaAtomica = massa;
@@ -16,15 +17,15 @@ public class ElementoQuimico {
 	public String getNome() {
 		return this.nome;
 	}
-	
+	//iii
 	public int getNumeroAtomico() {
 		return this.numeroAtomico;
 	}
-	
-	public boolean equals(ElementoQuimico elemQ) {
+	//iv
+	public boolean equals(Atomo elemQ) {
 		return this.getNumeroAtomico() == elemQ.getNumeroAtomico();
 	}
-	
+	//v
 	public int[] getEletrons() {
 		return this.qtdEletrons;
 	}
