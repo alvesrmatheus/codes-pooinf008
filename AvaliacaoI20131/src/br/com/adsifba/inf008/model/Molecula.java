@@ -25,7 +25,14 @@ public class Molecula {
 	}
 	//iii
 	public int qtdAtomosExistentes(Atomo atomo) {
-		if()
-		return 0;
+		int qtd=0;
+		for(Atomo a : this.atomos)
+			if(a.equals(atomo))
+				qtd++;
+		return qtd;
+	}
+	
+	private boolean verificaExistenciaAtomos(Atomo atomo){
+		return this.qtdAtomosExistentes(atomo) > 0;
 	}
 }
