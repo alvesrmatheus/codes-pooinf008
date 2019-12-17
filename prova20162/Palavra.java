@@ -39,9 +39,18 @@ public class Palavra{
         return false;
     }
     
-    public double nivelDeSimilaridade(){
+    public double nivelDeSimilaridade(Palavra palavra){
         double nivelSimilaridade = 0.0;
-        //TODO
+        if(equals(palavra))
+            nivelSimilaridade = 1;
+            
+        if(this.hasSinonimo(palavra) || palavra.hasSinonimo(this))
+            qtdSinonimos(palavra);
         return 0.0;
+    }
+    
+    private int qtdSinonimos(Palavra palavra){
+        //TODO
+        return 0;
     }
 }
