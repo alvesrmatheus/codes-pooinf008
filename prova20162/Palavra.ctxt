@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Palavra
+comment1.params=p
+comment1.target=Palavra(java.lang.String)
+comment2.params=palavra\ sinonimo
+comment2.target=Palavra(java.lang.String,\ java.lang.String)
+comment3.params=palavra
+comment3.target=void\ addPalavra(java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ getPalavra()
+comment5.params=palavra
+comment5.target=boolean\ equals(Palavra)
+comment6.params=palavra
+comment6.target=boolean\ verificaSinonimo(java.lang.String)
+comment7.params=palavra
+comment7.target=boolean\ hasSinonimo(java.lang.String)
+numComments=8
