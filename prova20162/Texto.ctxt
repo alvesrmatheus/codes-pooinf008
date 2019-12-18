@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Texto
+comment1.params=texto
+comment1.target=double\ nivelDeSimilaridade(Texto)
+comment2.params=palavra
+comment2.target=double\ nivelDeSimilaridade(Palavra)
+numComments=3

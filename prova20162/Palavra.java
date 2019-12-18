@@ -32,10 +32,6 @@ public class Palavra{
         return this.getPalavra().equals(palavra.getPalavra());
     }
     
-    public boolean verificaSinonimo(Palavra palavra){
-        return hasSinonimo(palavra);
-    }
-    
     private boolean hasSinonimo(Palavra palavra){
         for(Palavra s : this.similares)
             if(s.equals(palavra))
@@ -57,8 +53,10 @@ public class Palavra{
         double nivelSimilaridade = 0.0;
         if(this.equals(palavra))
             nivelSimilaridade = 1;
-        if(this.verificaSinonimo(palavra))
+        if(this.hasSinonimo(palavra))
             nivelSimilaridade+= 0.5;
-        return nivelSimilaridade + (this.qtdSinonimo(palavra) / 2*palavra.qtdSinonimo(this));
+        return nivelSimilaridade + 
+                (this.qtdSinonimo(palavra) /
+                2*palavra.qtdSinonimo(this));
     }
 }
