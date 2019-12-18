@@ -1,14 +1,14 @@
 public class Palavra{
-    private String armazenaPalavra;
+    private String conteudo;
     private Palavra[] similares;
     
     public Palavra(String p){
-        this.armazenaPalavra = p;
+        this.conteudo = p;
         this.similares = new Palavra[0];
     }
     
     public Palavra(String palavra, Palavra sinonimo){
-        this.armazenaPalavra = palavra;
+        this.setConteudo(palavra);
         this.addPalavra(sinonimo);
     }
     
@@ -21,7 +21,11 @@ public class Palavra{
     }
     
     public String getPalavra(){
-        return this.armazenaPalavra;
+        return this.conteudo;
+    }
+    
+    private void setConteudo(String conteudo){
+        this.conteudo = conteudo;
     }
     
     public boolean equals(Palavra palavra){
@@ -39,18 +43,22 @@ public class Palavra{
         return false;
     }
     
-    public double nivelDeSimilaridade(Palavra palavra){
-        double nivelSimilaridade = 0.0;
-        if(equals(palavra))
-            nivelSimilaridade = 1;
-            
-        if(this.hasSinonimo(palavra) || palavra.hasSinonimo(this))
-            qtdSinonimos(palavra);
-        return 0.0;
+    private double qtdSinonimo(Palavra palavra){
+        double qtd=0;
+        for(int i=0; i<this.similares.length; i++)
+            for(int j=0; i<palavra.similares.length; j++)
+                if(this.similares[i].equals(palavra.similares[j]))
+                    qtd++;
+                  
+        return qtd;
     }
     
-    private int qtdSinonimos(Palavra palavra){
-        //TODO
-        return 0;
+    public double nivelDeSimilaridade(Palavra palavra){
+        double nivelSimilaridade = 0.0;
+        if(this.equals(palavra))
+            nivelSimilaridade = 1;
+        if(this.verificaSinonimo(palavra))
+            nivelSimilaridade+= 0.5;
+        return nivelSimilaridade + (this.qtdSinonimo(palavra) / 2*palavra.qtdSinonimo(this));
     }
 }
