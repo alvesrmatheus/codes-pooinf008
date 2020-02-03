@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=ContaInvestimento
+comment1.params=
+comment1.target=ContaInvestimento()
+comment2.params=numero\ titular\ saldo\ limite
+comment2.target=ContaInvestimento(java.lang.Integer,\ java.lang.String,\ java.lang.Double,\ java.lang.Double)
+comment3.params=
+comment3.target=double\ getLimite()
+comment4.params=valor
+comment4.target=void\ Emprestar(double)
+numComments=5
