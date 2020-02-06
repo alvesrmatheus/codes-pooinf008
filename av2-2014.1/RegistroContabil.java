@@ -4,10 +4,12 @@ public class RegistroContabil{
     private BalancoContabil balanco;
     private LivroLancamentos livro;
     
-    public RegistroContrabil(String nome, long cnpj){
-        this.nome = nome;
-        this.cnpj = cnpj;
-        this.balanco = new BalancoContabil();
-        this.livro = new LivroLancamentos();
-    }
+    public void registrarFato(String descricao, String nomeCredito,
+                            String nomeDebito, double valor){
+        Conta credito = balanco.buscarConta(nomeCredito); 
+        Conta debito = balanco.buscarConta(nomeDebito); 
+        Lancamento lancamento = new Lancamento(descricao, valor, credito, debito);
+        this.livro.addRegistro(lancamento);
+        this.balanco.ajustar(nomeCredito, nomeDebito, valor);
+  }    
 }
