@@ -4,6 +4,19 @@ public class RegistroContabil{
     private BalancoContabil balanco;
     private LivroLancamentos livro;
     
+    public RegistroContabil(String nome, String cnpj){
+        this.setNome(nome);
+        this.setCNPJ(cnpj);
+    }
+    
+    private void setNome(String nome){
+        this.nome = nome;
+    }
+    
+    private void setCNPJ(String cnpj){
+        this.cnpj = cnpj;
+    }
+    
     public void registrarFato(String descricao, String nomeCredito,
                             String nomeDebito, double valor){
         Conta credito = balanco.buscarConta(nomeCredito); 
