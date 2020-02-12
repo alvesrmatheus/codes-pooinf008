@@ -1,4 +1,4 @@
-public class Conta{
+public abstract class Conta{
     private String nome;
     protected double saldo;
     
@@ -17,9 +17,9 @@ public class Conta{
         return this.nome;
     }   
     
-    public void creditar(double valor){
+    public abstract void creditar(double valor){
     }    
     
-    public void debitar(double valor){
+    public abstract void debitar(double valor){
     }    
 }
