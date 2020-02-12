@@ -4,10 +4,14 @@ public class Conta{
     
     public Conta(){}
     
-    /*public Conta(String nome, double saldo){
+    public Conta(String nome){
+        this.setNome(nome);
+        this.saldo = 0.0;
+    }
+    
+    private void setNome(String nome){
         this.nome = nome;
-        this.saldo = saldo;
-    }*/
+    }
     
     public String getNome(){
         return this.nome;
