@@ -1,17 +1,28 @@
 package aula129.model;
 
+import aula129.model.enums.Cor;
+
 public class Circulo extends Forma{
 	private double raio;
-	private static final double pi = 3.1415;
+	//private static final double pi = 3.14;
 	
-	public Circulo(double raio) {
-		super();
+	
+	public Circulo(Cor cor, double raio) {
+		super(cor);
+		this.setRaio(raio);;
+	}
+	//Getters and Setters
+	private double getRaio() {
+		return raio;
+	}
+
+	private void setRaio(double raio) {
 		this.raio = raio;
 	}
-	
+
 	@Override
 	public double calcularArea() {
-		return this.pi*(Math.pow(raio, 2));
+		return Math.PI*(Math.pow(raio, 2));
 	}
 
 	@Override
