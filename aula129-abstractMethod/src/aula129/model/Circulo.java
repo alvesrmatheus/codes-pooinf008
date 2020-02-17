@@ -27,7 +27,7 @@ public class Circulo extends Forma{
 
 	@Override
 	public String toString() {
-		return "Area do Circulo: " + calcularArea();
+		return String.format("Area do Circulo: %.2f" + calcularArea());
 	}
 	
 	

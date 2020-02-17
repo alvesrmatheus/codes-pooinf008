@@ -35,8 +35,8 @@ public class Retangulo extends Forma{
 
 	@Override
 	public String toString() {
-		return 	"Area do Retangulo: " 
-				+ calcularArea();
+		return 	String.format("Area do Retangulo: %.2f", 
+				+ calcularArea());
 	}
 	
 	
