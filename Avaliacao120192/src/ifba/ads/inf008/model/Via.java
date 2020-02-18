@@ -35,6 +35,11 @@ public class Via {
 				&& this.getTipo().equals(via.getTipo());
 	}
 	
+	public boolean equals1(Via via){
+			return this.getNome().equalsIgnoreCase(via.getNome()) 
+					&& this.getExtensao() == via.getExtensao();
+	}
+	
 	public boolean isAdjacente(Via via){
 		for(Via v : this.adjacentes)
 			if(v.equals(via))
