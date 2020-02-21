@@ -1,5 +1,11 @@
 #BlueJ class context
 comment0.target=RegistroContabil
-comment1.params=descricao\ nomeCredito\ nomeDebito\ valor
-comment1.target=void\ registrarFato(java.lang.String,\ java.lang.String,\ java.lang.String,\ double)
-numComments=2
+comment1.params=nome\ cnpj
+comment1.target=RegistroContabil(java.lang.String,\ java.lang.String)
+comment2.params=nome
+comment2.target=void\ setNome(java.lang.String)
+comment3.params=cnpj
+comment3.target=void\ setCNPJ(java.lang.String)
+comment4.params=descricao\ nomeCredito\ nomeDebito\ valor
+comment4.target=void\ registrarFato(java.lang.String,\ java.lang.String,\ java.lang.String,\ double)
+numComments=5

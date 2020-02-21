@@ -1,4 +1,5 @@
-public abstract class Conta{
+public abstract class Conta implements Ordenavel{
+    private String id;
     private String nome;
     protected double saldo;
     
@@ -9,6 +10,10 @@ public abstract class Conta{
         this.saldo = 0.0;
     }
     
+    public String getId(){
+        return this.id;
+    }
+    
     private void setNome(String nome){
         this.nome = nome;
     }
@@ -17,9 +22,14 @@ public abstract class Conta{
         return this.nome;
     }   
     
-    public abstract void creditar(double valor){
-    }    
+    public abstract void creditar(double valor);
     
-    public abstract void debitar(double valor){
-    }    
+    public abstract void debitar(double valor);   
+    
+    public int compare(Ordenavel outro){
+        if(!(outro instanceof Conta))
+            return 0;
+        Conta c = (Conta)outro;
+        return this.getId().compareTo(c.getId());    
+    }
 }

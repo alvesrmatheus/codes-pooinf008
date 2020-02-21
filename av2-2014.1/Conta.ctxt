@@ -2,11 +2,18 @@
 comment0.target=Conta
 comment1.params=
 comment1.target=Conta()
-comment2.params=
-comment2.target=java.lang.String\ getNome()
-comment2.text=public\ Conta(String\ nome,\ double\ saldo){\r\n\ \ \ \ \ \ \ \ this.nome\ \=\ nome;\r\n\ \ \ \ \ \ \ \ this.saldo\ \=\ saldo;\r\n}
-comment3.params=valor
-comment3.target=void\ creditar(double)
-comment4.params=valor
-comment4.target=void\ debitar(double)
-numComments=5
+comment2.params=nome
+comment2.target=Conta(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getId()
+comment4.params=nome
+comment4.target=void\ setNome(java.lang.String)
+comment5.params=
+comment5.target=java.lang.String\ getNome()
+comment6.params=valor
+comment6.target=void\ creditar(double)
+comment7.params=valor
+comment7.target=void\ debitar(double)
+comment8.params=outro
+comment8.target=int\ compare(Ordenavel)
+numComments=9
