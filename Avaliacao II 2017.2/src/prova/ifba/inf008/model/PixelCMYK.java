@@ -17,8 +17,7 @@ public class PixelCMYK extends Pixel{
 
 	@Override
 	public double getLuminosidade() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.key;
 	}
 
 }
