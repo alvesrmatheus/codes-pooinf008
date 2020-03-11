@@ -5,14 +5,13 @@ public class PixelRGB extends Pixel{
 	private float green;
 	private float blue;
 	
+	public PixelRGB() {}
 	
 	public PixelRGB(float red, float green, float blue) {
 		this.red = red;
 		this.green = green;
 		this.blue = blue;
 	}
-	
-	
 
 	public float getRed() {
 		return red;
@@ -25,6 +24,18 @@ public class PixelRGB extends Pixel{
 	public float getBlue() {
 		return blue;
 	}
+	
+	public void setRed(float red) {
+		this.red = red;
+	}
+
+	public void setGreen(float green) {
+		this.green = green;
+	}
+
+	public void setBlue(float blue) {
+		this.blue = blue;
+	}
 
 	@Override
 	public double getLuminosidade() {
@@ -32,5 +43,6 @@ public class PixelRGB extends Pixel{
 			(getGreen()*0.59) +
 			(getBlue()*0.11) / 255;
 	}
+
 
 }
